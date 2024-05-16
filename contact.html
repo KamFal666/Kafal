@@ -15,7 +15,7 @@
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="gallery.html">Projects</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -25,31 +25,77 @@
   <section id="contact">
     <div class="container">
       <h2>Contact</h2>
-      <p style="text-align: center;">Welcome to the contact page </p>
+      <p style="text-align: center;">Welcome to the contact page, feel free to contact me! </p>
+      <p style="text-align: center;">Phone: 123-456-789</p>
+      <p style="text-align: center;">E-mail: kamil@example.com </p>
     </div>
   </section>
-
-  <div class="container">
-    <div class="map-container">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d116806.41692617194!2d-3.2018922079438257!3d55.94901781267568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spl!2suk!4v1714175895373!5m2!1spl!2suk"
-        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <div class="text-container">
+    <div class="text">
+      <h2>Not answering?</h2>
+      <p style="text-align: center;">Use this contact form to get in touch!</p>
+      </script>
     </div>
+
+    <main class="container">
+      <div class="row">
+        <div class="col-sm">
+          <form action="mail.php" method="post">
+            <br>
+            <div class="form-group">
+              <label style="color: white;">Enter your E-mail</label>
+              <br>
+              <input class=" form-control" type="email" name="email" required>
+            </div>
+            <br>
+            <div class="form-group">
+              <label style="color: white;">Enter your message</label>
+              <br>
+              <textarea class="form-control" name="message" rows="5" minlength="1"></textarea>
+            </div>
+            <div class="form-group">
+              <br>
+              <input type="submit" value="Submit!" style="color: black;" class="btn">
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+
+
+    <script>
+      document.getElementById("contactForm").addEventListener("submit", function (event) {
+        alert("Thank you for contacting us!");
+      });
+    </script>
+
+    <br>
+    <br>
+    <br>
+    <br>
     <div class="text-container">
       <div class="text">
-        <h2>Find us!</h2>
-        <p style="text-align: center;">Edinburgh</p>
+        <h2>Find me!</h2>
+        <div class="container">
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d116806.41692617194!2d-3.2018922079438257!3d55.94901781267568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spl!2suk!4v1714175895373!5m2!1spl!2suk"
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+    <p style="text-align: center;">Address: 123 main street, Edinburgh </p>
+    <br>
+    <br>
 
-
-  <footer>
-    <div class=" container">
-      <p>&copy; 2024 Kafal</p>
-    </div>
-  </footer>
+    <footer>
+      <div class=" container">
+        <p>&copy; 2024 Kafal</p>
+      </div>
+    </footer>
 </body>
 
 </html>

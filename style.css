@@ -25,16 +25,30 @@ nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  background-color: #2b151f;
+  overflow: hidden;
 }
 
-nav ul li {
-  display: inline;
-  margin-right: 20px;
+nav li {
+  float: left;
 }
 
-nav ul li a {
-  color: #fff;
+nav li a {
+  display: block;
+  color: #ffffff;
+  text-align: center;
+  padding: 14px 16px;
   text-decoration: none;
+}
+
+nav li a:hover {
+  background-color: #5b2d42;
+}
+
+nav li a.active,
+nav li a:active {
+  background-color: #2b151f;
+  color: #2b151f;
 }
 
 section {
@@ -42,11 +56,13 @@ section {
 }
 
 h2 {
+  text-shadow: 2px 2px 5px black;
   color: #999999;
   text-align: center;
 }
 
 p {
+  text-shadow: 2px 2px 5px black;
   color: #ffffff;
   text-align: center;
 }
@@ -64,4 +80,64 @@ footer {
 
 .gallerypics {
   text-align: center;
+}
+
+.portrait {
+  text-align: center;
+}
+
+.slideshow-container {
+  position: relative;
+  width: 800px;
+  height: 400px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+#slide1:checked~.slides .slide:nth-child(1),
+#slide2:checked~.slides .slide:nth-child(2),
+#slide3:checked~.slides .slide:nth-child(3) {
+  opacity: 1;
+  z-index: 1;
+}
+
+.slide label {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.container {
+  text-align: center;
+}
+
+h2 {
+  color: #7299ba;
+}
+
+h1 {
+  color: #7299ba;
 }
